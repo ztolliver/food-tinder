@@ -1,0 +1,8 @@
+var breakfastFoodList ={
+	cereal : "cereal",
+	pancake : "pancake",
+	eggs : "eggs",
+	sausage : "sausage",
+	bacon : "bacon"
+	}
+	
