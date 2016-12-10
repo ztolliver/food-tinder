@@ -7,18 +7,33 @@
 <p>Start by choosing your food preferences</p>
 
   <form>
-        <label id="question">Question: Choose your breakfast items:</label>
-	<div id = "bChoice1Label0">hgfhgfhf<\div><br>
+        <label id="question">Question: Choose your breakfast items:</label></br>
+	
         <input type = "checkbox" id = "bChoice1"> 
-	<p id = "bChoice1Label0">sfseerse</p><br>
+	<p id="bChoice1Label0"></p><br>
+	
 	<input type = "checkbox" id = "bChoice2">
-	<p id = "bChoice1Label2"></p><br> 
+	<p id="bChoice1Label1"></p><br>
+
+	 
 	<input type = "checkbox" id = "bChoice3"> 
-	<p id = "bChoice1Label3"></p><br>
+	<p id="bChoice1Label2"></p><br>
+	
 	<input type = "checkbox" id = "bChoice4"> 
+	<p id="bChoice1Label3"></p><br>
         </div>
-        <input type="button" value="save" />
+        <input type="button" value="Next choices" />
    </form>
+
+<style>
+	input {
+		display: inline-block; 
+		}
+	p {
+		display: inline-block;
+	  }
+</style>
+
 
 
 <script type = "text/javascript">
@@ -30,32 +45,33 @@ var breakfastChoices = {
 	"choices": ["Cereal", "Pancake", "Eggs", "Sausage", "Bacon"]
 };
 
-var lunchChoices = [{question: "Choose your favorite lunch items", choices: ["Tuna", "PB", "Cheese", "Soup", "Salad"]}];
+var lunchChoices = {
+	"question": "Choose your favorite lunch items",
+	"choices": ["Tuna", "PB", "Cheese", "Soup", "Salad"]
+};
 
-var dinnerChoices = [{question: "Choose your favorite breakfast items", choices: ["Chicken", "Taco", "Pizza"]}];
+
+var dinnerChoices = {"question": "Choose your favorite dinner items", "choices": ["Chicken", "Taco", "Pizza"]};
+
 
 var bChoices = [];
 
 
 console.log(breakfastChoices.choices);
 for(var i=0; i<breakfastChoices.choices.length; i++){
-	console.log(breakfastChoices.choices[i]);
 	bChoices.push(breakfastChoices.choices[i]);
 }
 
 console.log(bChoices[0]);
 console.log(bChoices[1]);
-console.log(bChoices[2]);
-console.log(bChoices[3]);
-console.log(bChoices[4]);
 
-document.getElementById('question').innerHTML = "currentQuestion";
-document.getElementById('bChoiceLabel0').innerHTML = bChoices[0];
-document.getElementById('bChoiceLabel1').innerHTML = bChoices[1];
-document.getElementById('bChoiceLabel2').innerHTML = bChoices[2];
-document.getElementById('bChoiceLabel3').innerHTML = bChoices[3];
+document.getElementById('question').innerHTML = "Choose your breakfast items:";
+document.getElementById('bChoice1Label0').innerHTML = bChoices[0];
+document.getElementById('bChoice1Label1').innerHTML = bChoices[1];
+document.getElementById('bChoice1Label2').innerHTML = bChoices[2];
+document.getElementById('bChoice1Label3').innerHTML = bChoices[3];
 
-function choiceList() {     
+/*function choiceList() {     
     var question=allQuestions[1];
     for (choice in question.choices) {        
 
@@ -72,7 +88,7 @@ function choiceList() {
     document.getElementById('answersBox').appendChild(choiceSelection);
         }
 }
-choiceList();
+choiceList();*/
 
 </script>
 
