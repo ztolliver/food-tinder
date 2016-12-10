@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+	#popupbox{
+		margin:0;
+		margin-left: 50%;
+		margin-right: 50%;
+		margin-top:50px;
+		padding-top:15px;
+		height: 200px;
+		width: 30%;
+		position:absolut;
+		background: #FBFBF0;
+		z-index:9;
+		font-family:oblique;
+		visibility:higgen;
+	}
+</style>
+
+<script language="JavaScript" type ="text/javascript">
+
+	function login(showhide){
+		if(showhide == "show"){
+			document.getElementById('popupbox').style.visibility="visble";
+			}
+		else if(showhide == "hide"){
+		document.getElementById('popupbox').style.visibility="hidden";
+			}
+		}
+	
+</script>
+
+</head>
+
+
+<body>
+
+<div id="popupbox">
+<form name= "Login" action= " " method="post">
+<center><b>Username:</b></center>
+<center> <input name = "Username" size = "14" /> </center>
+<center><b>Password:</b></center>
+<center> <input name ="Password" type ="Password" size ="14"/> </center>
+<center> <input type = "Submit" name = "Submit" value = "Login"/> </center>
+<center> <input type = "Submit" name = "Submit" value = "Sign up"/> </center>
+</form>
+<br />
+
+
+
+
+
+</body>
+</html>
