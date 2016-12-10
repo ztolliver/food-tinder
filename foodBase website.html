@@ -1,0 +1,96 @@
+<html>
+<head>
+</head>
+<body>
+
+<h1>Welcome to Food Tinder! </h1>
+<p>Start by choosing your food preferences</p>
+
+  <form>
+        <label id="question">Question: Choose your breakfast items:</label></br>
+	
+        <input type = "checkbox" id = "bChoice1"> 
+	<p id="bChoice1Label0"></p><br>
+	
+	<input type = "checkbox" id = "bChoice2">
+	<p id="bChoice1Label1"></p><br>
+
+	 
+	<input type = "checkbox" id = "bChoice3"> 
+	<p id="bChoice1Label2"></p><br>
+	
+	<input type = "checkbox" id = "bChoice4"> 
+	<p id="bChoice1Label3"></p><br>
+        </div>
+        <input type="button" value="Next choices" />
+   </form>
+
+<style>
+	input {
+		display: inline-block; 
+		}
+	p {
+		display: inline-block;
+	  }
+</style>
+
+
+
+<script type = "text/javascript">
+
+//Now add some JS script
+
+var breakfastChoices = {
+	"question": "Choose your favorite breakfast items",
+	"choices": ["Cereal", "Pancake", "Eggs", "Sausage", "Bacon"]
+};
+
+var lunchChoices = {
+	"question": "Choose your favorite lunch items",
+	"choices": ["Tuna", "PB", "Cheese", "Soup", "Salad"]
+};
+
+
+var dinnerChoices = {"question": "Choose your favorite dinner items", "choices": ["Chicken", "Taco", "Pizza"]};
+
+
+var bChoices = [];
+
+
+console.log(breakfastChoices.choices);
+for(var i=0; i<breakfastChoices.choices.length; i++){
+	bChoices.push(breakfastChoices.choices[i]);
+}
+
+console.log(bChoices[0]);
+console.log(bChoices[1]);
+
+document.getElementById('question').innerHTML = "Choose your breakfast items:";
+document.getElementById('bChoice1Label0').innerHTML = bChoices[0];
+document.getElementById('bChoice1Label1').innerHTML = bChoices[1];
+document.getElementById('bChoice1Label2').innerHTML = bChoices[2];
+document.getElementById('bChoice1Label3').innerHTML = bChoices[3];
+
+/*function choiceList() {     
+    var question=allQuestions[1];
+    for (choice in question.choices) {        
+
+    var choiceSelection = document.createElement('input');
+    var choiceLabel = document.createElement('label');
+        
+
+    choiceSelection.setAttribute('type', 'radio');
+    choiceSelection.setAttribute('name', question.choices[choice]);
+        
+    choiceLabel.innerHTML=question.choices[choice];
+    choiceLabel.setAttribute('for', question.choices[choice]);
+
+    document.getElementById('answersBox').appendChild(choiceSelection);
+        }
+}
+choiceList();*/
+
+</script>
+
+</body>
+</html>
